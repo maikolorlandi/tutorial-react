@@ -3,7 +3,7 @@ import Coktail from "./Cocktail";
 import styled from "styled-components";
 
 const Cocktails = ({ data }) => {
-  return <Wrapper>Cockail List</Wrapper>;
+  return <Wrapper>{data.map((cocktail) => <Coktail key={cocktail.idDrink} {...cocktail} />)}</Wrapper>;
 };
 
 const Wrapper = styled.section`

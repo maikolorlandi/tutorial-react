@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from "react";
+import useFetch from "../utils/useFetch";
 import { Hero, Cocktails, Loading, ErrorMessage } from "../components";
 import { FaSearch } from "react-icons/fa";
 import Lottie from "react-lottie";
 import animationData from "../assets/animation/drink-animation.json";
 import { Link } from "react-router-dom";
+import { useGlobalContext } from "../context";
 const HomeScreen = () => {
-  const [input, setInput] = useState("Negroni");
-
+  const { query, loading, isError, count, data, searchCocktail } = useGlobalContext();
+  const [input, setInput] = useState(query);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    searchCocktail(input);
+  }
   return <>
     <Hero>
       <div className="home-hero">
@@ -43,7 +49,7 @@ const HomeScreen = () => {
     <section className="container home-screen">
       <div className="search-bar">
         <div className="form-container">
-          <form>
+          <form onSubmit={handleSubmit}>
             <label htmlFor="drink">
               <h4>Cerca un drink</h4>
             </label>
@@ -51,7 +57,7 @@ const HomeScreen = () => {
               <input
                 className="input"
                 type="text"
-                placeholder={input}
+                placeholder={query}
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 id="drink"
@@ -62,8 +68,19 @@ const HomeScreen = () => {
             </div>
           </form>
         </div>
-        <p className="result">2 risultati trovati per "{input}" </p>
+        <p className="result">{count} risultati trovati per "{input}" </p>
       </div>
+    </section>
+    <section className="container">
+      {loading ? (
+        <Loading />
+      ) : isError ? (
+        <ErrorMessage />
+      ) : count > 0 ? (
+        <Cocktails data={data.drinks} />
+      ) : (
+        <p>Nessun risultato trovato</p>
+      )}
     </section>
   </>;
 };
