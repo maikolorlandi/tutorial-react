@@ -1,57 +1,17 @@
-# react-tutorial-base
+IT
+# Istruzioni generali per visualizzare i vari progetti:
 
-## Istruzioni Generali per utilizzare in maniera corretta i singoli progetti
+Accedere alla repository del progetto; ogni progetto contiene la cartella "Inizio".
+Una volta entrati nella cartella "Inizio", eseguire il comando npm start per visualizzare il progetto all’indirizzo http://localhost:3000/.
 
-- Scaricare il file Zip oppure Clonare (in questo caso rimuovere la cartella .git -rm rf .git [mac] rmdir .git [windows])
-- Spostarsi all'interno del progetto in cui vogliamo lavorare `cd nomeprogetto/inizio`
-- oppure `cd nomeprogetto/risultato` per vederne il risulato finale
-- lanciare comando dal terminale `npm install`
 
-### Progetti Rispetto all'avanzamento del corso
+Il progetto principale si trova nel percorso "cocktail/inizio".
 
-Per visionare anteprima dei progetti: https://hpv4learning.it/corso-react-hook-teoria-progetti/?scrollTo=projects
-In ogni progetto troverete una cartella **inizio** ed una **risultato**
+EN
+# General instructions to view the various projects:
 
-#### Inizio
+Access the project repository; each project contains the "Inizio" folder.
+Once inside the "Inizio" folder, run npm start to view the project at http://localhost:3000/.
 
-Contiene il progetto con gli elementi necessari per seguire il tutorial:
 
-- Tutte le dependencies utilizzate (quando necessario)
-- Styling: Tutto il CSS sarà già precompilato in un file index.css
-- Link: ogni url utilizzato sarà già presente
-- Componenti: I componenti saranno già importati e (ovviamente vuoti)
-
-#### Risultato
-
-Contiene il progetto completo:
-
-- Contiene il progetto finale e completo
-
-#### Dopo aver concluso la sezione riguardo useState Hook
-
-1. Appuntamenti: https://appuntamenti-app.netlify.app/
-
-#### Dopo aver concluso useEffect e Render Condizionale
-
-2. dark-mode: https://dark-mode-tutorial.netlify.app/
-3. vacanze : https://vacanze.netlify.app/
-4. slider: https://slider-tutorial.netlify.app/
-5. Gelateria: https://gelateria-tutorial.netlify.app/
-
-#### Dopo aver concluso la sezione riguardo a Form e useRef
-
-6. Color-Grading: https://color-grading-tutorial.netlify.app/
-7. Navbar: https://navbar-tutorial.netlify.app/
-
-#### Dopo aver concluso la sezione riguardo ad useReducer, propDrilling e useContext
-
-8. sidebar: https://sidebar-tutorial.netlify.app/
-9. cart: https://cart-tutorial.netlify.app/
-
-#### Dopo aver concluso la visione di tutte le puntate di teoria Base
-
-10. cocktail: https://wiki-drink.netlify.app/
-
-#### Redux: Dopo aver completato almeno il progetto 8 e 9
-
-11. pick.me: https://redux-pick-me.netlify.app/
+The main project is located in the "cocktail/inizio" path.
