@@ -8,9 +8,10 @@ import Paginator from "../components/Paginator";
 import { useParams } from "react-router-dom";
 
 const PaginatedScreen = () => {
+  const { page } = useParams();
   return (
     <Layout>
-      <h1>Paginated</h1>
+      <h1>Paginated: {page}</h1>
     </Layout>
   );
 };
